@@ -4,15 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Web 100</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
 </head>
 
 <body>
-    <header>
-        <h1>Front End Web 100 Starter</h1>
-        <h2>Progressive ITU</h2>
-    </header>
-    <main>
-        
+    <div class="container-fluid jumbotron page-header">
+        <h1>Tip Calculator</h1>
+        <marquee>
+            <h2>Made by Mikey Korst</h2>
+        </marquee>
+    </div>
+    <main class="container">
+        <div class="input-group mb-3"
+             id="bill-input-box">
+            <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   id="input-amt">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Number of people to split the bill?</span>
+            </div>
+            <input type="text"
+                   class="form-control"
+                   id="num-people">
+
+        </div>
+        <div class="input-group mb-3"
+             id="button-group">
+            <button class="btn btn-outline-secondary button-group tip-group">10%</button>
+            <button class="btn btn-outline-secondary button-group tip-group">15%</button>
+            <button class="btn btn-outline-secondary button-group tip-group">20%</button>
+            <div class="input-group-prepend">
+                <span class="input-group-text">Custom Tip</span>
+            </div>
+            <input type="text"
+                   class="form-control tip-group"
+                   id="custom-tip-input">
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">Bill Amount: $<span id="bill-amt"></span></li>
+            <li class="list-group-item">Tip Percentage: <span id="tip-pct"></span>%</li>
+            <li class="list-group-item">Amount of tip: $<span id="tip-amt"></span></li>
+            <li class="list-group-item"
+                id="total-list-item">Total to be Paid: $<span id="bill-total"></span></li>
+            <li class="list-group-item">Total per person: $<span id="bill-per-person"></span></li>
+
+        </ul>
     </main>
 </body>
 
